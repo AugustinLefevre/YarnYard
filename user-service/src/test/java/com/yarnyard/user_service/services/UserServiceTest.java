@@ -17,9 +17,9 @@ import java.util.Optional;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserServiceTest {
-    private final UserRepository repository = Mockito.mock(UserRepository.class);;
+    private final UserRepository repository = Mockito.mock(UserRepository.class);
 
-    private UserService service;
+    private final UserService service;
 
     public UserServiceTest(){
         service = new UserService(repository);
