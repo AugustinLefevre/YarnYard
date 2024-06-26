@@ -5,15 +5,18 @@ import com.yarnyard.story_service.repositories.StoryRepository;
 import com.yarnyard.story_service.requests.StoryCreateRequest;
 import com.yarnyard.story_service.requests.StoryUpdateRequest;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class StoryService {
-    @Autowired
-    private StoryRepository repository;
+    private final StoryRepository repository;
+
+    public StoryService(StoryRepository repository)
+    {
+        this.repository = repository;
+    }
 
     public List<Story> getStories(){
         return repository.findAll();
