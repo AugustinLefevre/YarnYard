@@ -6,7 +6,6 @@ import com.yarnyard.user_service.requests.LoginRequest;
 import com.yarnyard.user_service.requests.UpdateUserRequest;
 import com.yarnyard.user_service.responces.ConnectionResponse;
 import com.yarnyard.user_service.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
-    @Autowired
-    private UserService service;
+    private final UserService service;
+    public UserController(UserService userService){
+       service = userService;
+    }
 
     @GetMapping
     public List<User> getUsers(){
@@ -30,7 +30,6 @@ public class UserController {
 
     @PostMapping
     public ConnectionResponse addUser(@RequestBody CreateUserRequest request){
-
         return service.addUser(request);
     }
 
