@@ -7,15 +7,17 @@ import com.yarnyard.user_service.requests.LoginRequest;
 import com.yarnyard.user_service.requests.UpdateUserRequest;
 import com.yarnyard.user_service.responces.ConnectionResponse;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserService {
-    @Autowired
     private UserRepository repository;
+
+    public UserService (UserRepository repository){
+        this.repository = repository;
+    }
 
     public List<User> getUsers(){
        return repository.findAll();
@@ -41,23 +43,28 @@ public class UserService {
     }
 
     public void updateUser(UpdateUserRequest request) {
-        User user = getUserById(request.getUser_id());
+        if(request.getUser_id() != null){
+            User user = getUserById(request.getUser_id());
 
-        if(user != null){
-            if(request.getName() != null){
-                user.setName(request.getName());
+            if(user != null){
+                if(request.getName() != null){
+                    user.setName(request.getName());
+                }
+                if(request.getPassword() != null){
+                    user.setPassword(request.getPassword());
+                }
+                if(request.getEmail() != null){
+                    user.setEmail(request.getEmail());
+                }
+                if(request.getRole() != null){
+                    user.setRole(request.getRole());
+                }
+                repository.save(user);
             }
-            if(request.getPassword() != null){
-                user.setPassword(request.getPassword());
-            }
-            if(request.getEmail() != null){
-                user.setEmail(request.getEmail());
-            }
-            if(request.getRole() != null){
-                user.setRole(request.getRole());
-            }
-            repository.save(user);
+        } else{
+            throw new RuntimeException("The user id is null");
         }
+
     }
 
     public ConnectionResponse login(LoginRequest request) {
