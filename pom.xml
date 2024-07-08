@@ -28,6 +28,8 @@
         <module>story-service</module>
         <module>chat-service</module>
         <module>aibot-service</module>
+        <module>discovery-server</module>
+        <module>text-proposal-service</module>
     </modules>
     
 </project>

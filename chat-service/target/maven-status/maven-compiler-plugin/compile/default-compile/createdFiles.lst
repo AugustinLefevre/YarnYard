@@ -1,0 +1,7 @@
+com\yarnyard\chat_service\ChatServiceApplication.class
+com\yarnyard\chat_service\repositories\MessageRepositoty.class
+com\yarnyard\chat_service\services\MessageService.class
+com\yarnyard\chat_service\configurations\WebSocketConfig.class
+com\yarnyard\chat_service\controllers\MessageRestController.class
+com\yarnyard\chat_service\entities\Message.class
+com\yarnyard\chat_service\controllers\ChatController.class
