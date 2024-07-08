@@ -11,6 +11,7 @@
         <module name="user-service" />
         <module name="discovery-server" />
         <module name="story-service" />
+        <module name="text-proposal-service" />
         <module name="aibot-service" />
       </profile>
     </annotationProcessing>
@@ -25,6 +26,7 @@
       <module name="discovery-server" options="-parameters" />
       <module name="story-service" options="-parameters" />
       <module name="test-service" options="-parameters" />
+      <module name="text-proposal-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

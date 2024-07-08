@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 
+import java.util.List;
+
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +18,8 @@ public class Story {
     @Column(name = "story_id")
     private String storyId;
     private String title;
-    private String text;
+    @Column(name = "text_proposals")
+    private List<Integer> textProposals;
     @Column(name = "main_idea")
     private String mainIdea;
     @Column(name = "user_id")
