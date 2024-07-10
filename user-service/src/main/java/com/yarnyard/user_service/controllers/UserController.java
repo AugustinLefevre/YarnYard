@@ -45,6 +45,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ConnectionResponse login(@RequestBody LoginRequest request){
-        return service.login(request);
+        ConnectionResponse response = service.login(request);
+        return response;
     }
 }

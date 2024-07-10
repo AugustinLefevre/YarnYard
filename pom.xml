@@ -30,6 +30,7 @@
         <module>aibot-service</module>
         <module>discovery-server</module>
         <module>text-proposal-service</module>
+        <module>gateway</module>
     </modules>
     
 </project>

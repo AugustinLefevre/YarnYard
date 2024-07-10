@@ -1,0 +1,4 @@
+{
+  "schemaType": "JSON",
+  "schema": "{\"$schema\": \"http://json-schema.org/draft-07/schema#\",\"title\": \"TextProposal\",\"type\": \"object\",\"properties\": {\"textProposalId\": {\"type\": \"string\"},\"userId\": {\"type\": \"string\"},\"storyId\": {\"type\": \"string\"},\"index\": {\"type\": \"integer\"},\"text\": {\"type\": \"string\"}},\"required\": [\"textProposalId\", \"userId\", \"storyId\", \"index\", \"text\"]}"
+}

@@ -13,12 +13,13 @@ import org.hibernate.annotations.UuidGenerator;
 public class TextProposal {
     @Id
     @UuidGenerator
-    private Integer id;
+    @Column(name = "text_proposal_id", unique = true)
+    private String textProposalId;
     @Column(name = "user_id")
     private String userId;
     @Column(name = "story_id")
     private String storyId;
-    @Column(nullable = false)
+    @Column(name = "text_index", nullable = false)
     private Integer index;
     @Column(nullable = false)
     private String text;
