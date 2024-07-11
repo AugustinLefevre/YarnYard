@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/message")
+@RequestMapping("/chat")
 public class MessageRestController {
     @Autowired
     private MessageService service;
-    @GetMapping
+    @GetMapping("/message")
     public List<Message> getMessages(){
         return service.getMessages();
     }
