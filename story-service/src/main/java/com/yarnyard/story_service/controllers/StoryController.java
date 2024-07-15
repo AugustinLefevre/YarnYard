@@ -20,6 +20,7 @@ public class StoryController {
 
     @GetMapping("/user/{id}")
     public List<Story> finAllByUserId(@PathVariable("id") String user_id){
+
         return service.getAllByUserId(user_id);
     }
 
