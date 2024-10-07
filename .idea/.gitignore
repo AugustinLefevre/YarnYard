@@ -1,3 +1,4 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/aibot-service/src/main/resources/ModelLanguage/training_text/*

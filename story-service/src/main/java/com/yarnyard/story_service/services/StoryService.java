@@ -6,7 +6,6 @@ import com.yarnyard.story_service.repositories.StoryRepository;
 import com.yarnyard.story_service.requests.StoryCreateRequest;
 import com.yarnyard.story_service.requests.StoryUpdateRequest;
 import jakarta.persistence.EntityNotFoundException;
-import org.hibernate.Hibernate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +31,9 @@ public class StoryService {
     }
 
     public Story addStory(StoryCreateRequest request){
+        if(request.getTitle() == null || request.getTitle().equals("")){
+            throw new RuntimeException("Story title can not be null or empty!");
+        }
         Story createdStory = new Story();
         BeanUtils.copyProperties(request, createdStory);
 
