@@ -1,38 +1,29 @@
 "exclude","description"
-"Où chaque plume trouve sa voie, et chaque lecteur son évasion.","phrase recurente"
-"Veuillez laisser ce champ vide :",""
-"Accueil",""
-"> [A-Za-z ]+","> Nom Prenom"
-"Les droits d'auteurs conférent par principe une propriété privative é son
- titulaire, lui permettant de déterminer les conditions d'exploitation de son oeuvre.
- Les infractions aux droits d'auteurs sont sanctionnées pénalement (CPI, art. L. 335-1 é L. 335-10)
- La violation des droits d'auteurs est constitutive du délit de contrefaçon puni d'une peine de 300 000 euros
- d'amende et de 3 ans d'emprisonnement (CPI, art. L. 335-2 s.). 
- Des peines complémentaires - fermeture d'établissement, confiscation, publication par voie d'affichage de la
- décision judiciaire - peuvent en outre étre prononcées.", "mention legale."
- ">[a-zA-ZÀ-ÖØ-öø-ÿ ]+", "carater accentué"
-" {2,}","successive space"
-"Lire, écrire, partager",
-"Navigation :",
-"Cette oeuvre est déclarée complète, relue et corrigée par son auteur.",
-"^Œuvre publiée sous licence Creative [\w\d \.-]+",
-"[ \d.-]+Atramenta$",
-"Rejoignez nos plus de 80 000 membres amoureux de lecture et d'écriture ! Inscrivez-vous gratuitement pour reprendre la lecture de cette œuvre au bon endroit à votre prochaine visite et pouvoir la commenter.",
-"Retour à l'accueil Atramenta",
-"Commencer la lecture : [\d ]+",
-"Date de publication sur Atramenta : [\w\d À-ÖØ-öø-ÿ]+",
-"[\w\d -\.À-ÖØ-öø-ÿŒ]+sous licence Creative Commons[\w\d -\.À-ÖØ-öø-ÿ]+",
-"Vous êtes en mode[\D]+\(façon ereader\)",
-"Histoire par âges",
-"Histoire personnalisée",
-"Offrez à votre enfant une aventure magique en le transformant en héros d'un conte personnalisé. Utilisez notre outil d'IA en entrant simplement son nom et un lieu pour générer instantanément une histoire captivante. Votre enfant sera transporté dans un univers unique et inoubliable.",
-"Histoire par âges",
-"Histoire par genres",
-"À propos",
-"Vous pouvez copier le lien de l'histoire ci-dessous, ou cliquer sur les icônes en dessous pour partager cette histoire sur votre messagerie ou réseau social préféré !",
-"Découvrez notre sélection de contes pour enfants à lire gratuitement en ligne. Des histoires merveilleuses et captivantes pour stimuler l'imagination et éveiller la curiosité de vos petits. Des personnages attachants, des aventures palpitantes, des leçons de vie à découvrir à travers nos contes pour enfants. Plongez dans un monde magique et laissez-vous emporter par la magie des mots.",
-"Découvrez des histoires d'aventures passionnantes pour enfants à lire gratuitement. Suivez les aventures de héros courageux dans des mondes fantastiques et mystérieux. Des histoires fascinantes qui stimuleront l'imagination de vos enfants et les emmèneront dans des univers incroyables. Plongez dans l'univers merveilleux des histoires pour enfants et laissez-les rêver en grand.",
-"Découvrez nos histoires de mystères et d'enquêtes pour enfants à lire gratuitement. Plongez dans des aventures palpitantes où vos petits détectives devront résoudre des énigmes et démasquer les coupables. Des histoires captivantes qui stimuleront leur imagination et leur esprit d'analyse. Installez-vous confortablement et laissez-vous emporter dans nos récits passionnants.",
-"Découvrez notre sélection d'histoires de science-fiction pour enfants ! Plongez dans des mondes imaginaires et laissez votre enfant explorer l'inconnu. Nos histoires sont gratuites et disponibles en ligne, pour une lecture facile et accessible. Stimulez l'imagination de votre enfant avec nos récits passionnants. Venez lire avec nous !",
-"Découvrez notre collection d'histoires éducatives pour enfants, accessibles en ligne et téléchargeables gratuitement en PDF. Chaque récit est conçu pour éveiller la curiosité et stimuler l'imagination des plus jeunes, tout en leur transmettant des valeurs essentielles. Plongez dans des aventures captivantes qui allient plaisir de la lecture et apprentissage. Explorez des thèmes variés et enrichissants qui accompagneront vos enfants dans leur développement. Laissez-les grandir avec des histoires qui les inspirent et les instruisent !",
-"Découvrez nos histoires fantastiques pour enfants, disponibles gratuitement en ligne. Plongez dans des univers magiques peuplés de créatures extraordinaires et laissez votre imagination s'envoler. Nos histoires sont adaptées à tous les âges et permettront à vos enfants de s'évader le temps d'une lecture. N'hésitez plus, venez découvrir nos récits merveilleux dès maintenant !",
+"Il était une histoire",
+"Inscription",
+"Connexion",
+"Rechercher sur il était une histoire :",
+"Contes et légendes",
+"Faire grandir le plaisir de lire avec la",
+"Inscrivez-vous gratuitement",
+"Activités imprimables",
+"Fiches pédagogiques",
+"Les ressources",
+"Puzzles",
+"Coloriages",
+"Dessin",
+"Les bonus",
+"Le Covid-19 expliqué aux enfants",
+"Toutes les histoires",
+"connectez-vous pour accéder à cette fonctionnalité !",
+"Fables et poésies",
+"Comptines et chansons",
+"Documentaires",
+"Anglais"
+"etFaire grandir le plaisir de lire avec la",
+"et    ",
+"etAmmamellen et Elias   ",
+"Les histoiresAlbums et histoires  où"
+
+
+

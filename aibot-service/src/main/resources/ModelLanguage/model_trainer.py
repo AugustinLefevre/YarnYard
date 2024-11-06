@@ -15,6 +15,12 @@ tokenizer = tokenizer.Tokenizer(texts, 32)
 # Tokenisation des données
 X, Y = tokenizer.tokenize()
 
+print(f"Max index in X: {X.max()}, Min index in X: {X.min()}")
+print(f"Max index in Y: {Y.max()}, Min index in Y: {Y.min()}")
+vocab_size = 10000
+X = torch.clamp(X, min=0, max=vocab_size-1)
+Y = torch.clamp(Y, min=0, max=vocab_size-1)
+
 # Paramètres du modèle
 vocab_size = 10000  # Taille du vocabulaire (nombre maximum de mots que le modèle peut traiter)
 embed_size = 1024    # Taille des vecteurs d'embedding qui représentent chaque mot, permettant une meilleure compréhension des relations entre eux

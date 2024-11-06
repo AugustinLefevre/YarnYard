@@ -1,6 +1,6 @@
 include,exclude
-,facebook
-,google
+iletaitunehistoire,facebook
+lire,google
 ,linkedin
 ,radiofrance
 ,youtube
@@ -40,3 +40,9 @@ include,exclude
 ,.pdf
 ,#note
 ,.php
+,maif
+,inscription
+,connexion
+,le-covid-19-explique-aux-enfants
+,anglais
+,dessin

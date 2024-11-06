@@ -71,7 +71,7 @@ class Web_scrapper:
 
         return decompressed_content.decode(response.encoding)
 
-    def get_texts(self, url, tags=['p']):
+    def get_texts(self, url, tags=['p', 'div']):
         try:
             
             html = self.get_decompressed_content(url)
@@ -149,11 +149,12 @@ class Web_scrapper:
 
         if ".txt" not in name:
             name = name + ".txt"
+        name = name.replace(".txt", self.generate_random_word() + ".txt")
         return name
     
     def clear_text(self, page_content):
         for regex in self.exclude_string_therms:
-            page_content = re.sub(regex, '', page_content)
+            page_content = re.sub(regex, ' ', page_content)
         page_content = page_content.replace('\r\n', '\n').replace('\r', '\n')
         page_content = re.sub(r'\n\s*\n+', '', page_content)
         return page_content
