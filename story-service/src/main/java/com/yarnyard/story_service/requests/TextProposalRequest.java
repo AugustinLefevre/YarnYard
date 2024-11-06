@@ -1,4 +1,4 @@
-package com.yarnyard.text_proposal_service.requests;
+package com.yarnyard.story_service.requests;
 
 import lombok.*;
 

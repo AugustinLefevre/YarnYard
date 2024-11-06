@@ -7,6 +7,12 @@ import com.yarnyard.story_service.requests.StoryUpdateRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+import java.util.ArrayList;
 
 public class StoryServiceTest {
 
@@ -19,8 +25,10 @@ public class StoryServiceTest {
     }
     @Test
     public void testGetStories(){
-        service.getStories();
-        Mockito.verify(repository, Mockito.times(1)).findAll();
+        Pageable pageable = PageRequest.of(0, 10, Sort.by("date").descending());
+        Mockito.when(repository.findAll(Mockito.any(Pageable.class))).thenReturn(Mockito.mock(Page.class));
+        service.getPageableStories(0);
+        Mockito.verify(repository, Mockito.times(1)).findAll(pageable);
     }
     @Test
     public void testGetStoryById(){

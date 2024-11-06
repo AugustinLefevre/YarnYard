@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Getter @Setter
@@ -31,6 +32,8 @@ public class Story {
     private String mainIdea;
     @Column(name = "user_id", nullable = false)
     private String userId;
+    @Column(name = "creation_date", nullable= false)
+    private Date creationDate;
 
     public void addNewTextProposal(TextProposal textProposal){
         this.textProposalIds.add(textProposal.getTextProposalId());

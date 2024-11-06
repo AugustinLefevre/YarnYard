@@ -7,9 +7,15 @@ import com.yarnyard.story_service.requests.StoryCreateRequest;
 import com.yarnyard.story_service.requests.StoryUpdateRequest;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,10 +28,6 @@ public class StoryService {
         this.repository = repository;
     }
 
-    public List<Story> getStories(){
-        return repository.findAll();
-    }
-
     public Story getStoryById(String id){
         return repository.findById(id).orElse(null);
     }
@@ -36,6 +38,7 @@ public class StoryService {
         }
         Story createdStory = new Story();
         BeanUtils.copyProperties(request, createdStory);
+        createdStory.setCreationDate(new Date());
 
         repository.save(createdStory);
         return createdStory;
@@ -70,6 +73,16 @@ public class StoryService {
         } else {
             throw new EntityNotFoundException("Story not found with ID: " + textProposal.getStoryId());
         }
+    }
 
+    public List<Story> getPageableStories(int pageIndex){
+        Pageable pageable = PageRequest.of(pageIndex, 15, Sort.by("creationDate").descending());
+        Page<Story> stories = repository.findAll(pageable);
+        if (stories != null) {
+            return stories.getContent();
+        }
+        else{
+            throw new EntityNotFoundException("An error occur when trying to access Stories ");
+        }
     }
 }

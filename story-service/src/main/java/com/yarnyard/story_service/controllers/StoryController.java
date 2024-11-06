@@ -15,9 +15,6 @@ public class StoryController {
     @Autowired
     private StoryService service;
 
-    @GetMapping
-    public List<Story> findAll(){return service.getStories();}
-
     @GetMapping("/user/{id}")
     public List<Story> finAllByUserId(@PathVariable("id") String user_id){
 
@@ -43,5 +40,10 @@ public class StoryController {
     @DeleteMapping("/{id}")
     public void deleteStory(@PathVariable("id") String id){
         service.deleteStory(id);
+    }
+
+    @GetMapping("/page/{page_index}")
+    public List<Story> getStories(@PathVariable("page_index") int pageIndex){
+        return service.getPageableStories(pageIndex);
     }
 }

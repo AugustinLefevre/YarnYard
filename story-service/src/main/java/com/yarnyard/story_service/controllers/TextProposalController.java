@@ -1,11 +1,11 @@
-package com.yarnyard.text_proposal_service.controllers;
+package com.yarnyard.story_service.controllers;
 
-import com.yarnyard.text_proposal_service.requests.TextProposalRequest;
-import com.yarnyard.text_proposal_service.services.TextProposalService;
+import com.yarnyard.story_service.requests.TextProposalRequest;
+import com.yarnyard.story_service.services.TextProposalService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/text-proposal")
+@RequestMapping("/story")
 public class TextProposalController {
     TextProposalService service;
 
@@ -13,12 +13,12 @@ public class TextProposalController {
         this.service = service;
     }
 
-    @PostMapping
+    @PostMapping("/text-proposal")
     public void createNewTextProposal(@RequestBody TextProposalRequest request){
         service.createNewTextProposal(request);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/text-proposal/{id}")
     public void deleteTextProposal(@PathVariable("id") Integer id){
         service.deleteTextProposal(id);
     }

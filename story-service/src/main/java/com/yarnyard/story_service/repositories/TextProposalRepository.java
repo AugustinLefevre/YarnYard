@@ -1,6 +1,6 @@
-package com.yarnyard.text_proposal_service.repositories;
+package com.yarnyard.story_service.repositories;
 
-import com.yarnyard.text_proposal_service.models.TextProposal;
+import com.yarnyard.story_service.models.TextProposal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TextProposalRepository extends JpaRepository<TextProposal, Integer> {

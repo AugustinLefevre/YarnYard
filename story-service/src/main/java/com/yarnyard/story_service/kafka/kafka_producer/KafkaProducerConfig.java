@@ -1,6 +1,6 @@
-package com.yarnyard.text_proposal_service.configurations;
+package com.yarnyard.story_service.kafka.kafka_producer;
 
-import com.yarnyard.text_proposal_service.models.TextProposal;
+import com.yarnyard.story_service.models.TextProposal;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;

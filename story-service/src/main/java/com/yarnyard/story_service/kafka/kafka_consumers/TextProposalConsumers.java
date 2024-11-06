@@ -1,4 +1,4 @@
-package com.yarnyard.story_service.kafka_consumers;
+package com.yarnyard.story_service.kafka.kafka_consumers;
 
 import com.yarnyard.story_service.models.TextProposal;
 import com.yarnyard.story_service.services.StoryService;
